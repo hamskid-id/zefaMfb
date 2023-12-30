@@ -1,0 +1,160 @@
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.navListContainer{
+  display:flex;
+}
+.bg-green{
+  background:#006837!important;
+  color:white;
+}
+.banner_wrapper{
+  background-image:url("https://zefamfb.com/images/smiling-office-guy\ \(1\).png");
+  background-position: top;
+}
+.ContactBg{
+  position:absolute;
+  background-position: top;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://zefamfb.com/images/customer-care\ \(1\).png");
+}
+.openingBg{
+  position:absolute;
+  background-position: top;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://zefamfb.com/images/open-account.png");
+}
+.introBg{
+  position:absolute;
+  background-position: top;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://zefamfb.com/images/smiling-office-guy\ \(1\).png");
+}
+.CareersBg{
+  position:absolute;
+  background-position: top;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://zefamfb.com/images/careers.png");
+}
+.bg-lightgrey{
+  background: rgba(255, 255, 255, 0.748);
+}
+.section2-overlay{
+  z-index:100;
+  background:whitesmoke;
+}
+.introContent{
+  z-index: 100;
+}
+.introBg::after,.openingBg::after,.ContactBg:after,.CareersBg:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: linear-gradient(0deg, hsla(250,5%,5%,1),hsla(250,3%,3%,0.3));
+}
+.bg-brown{
+  background:#252d3a;
+}
+.text-black{
+ color: rgba(0, 0, 0, 0.702) !important;
+}
+.bg-whitesmoke{
+  background:whitesmoke;
+}
+.c-brown,.c-olive{
+  color:darkolivegreen;
+}
+.bg-olive{
+  background:darkolivegreen!important;
+}
+.text-green{
+  color:#006837;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+.applyBtn{
+  background:#006837;
+}
+.read-the-docs {
+  color: #888;
+}
+.loan_cover,.caption{
+  background: rgba(255, 255, 255, 0.748);
+}
+.bg_transparent{
+  background:transparent;
+}
+.mobilenav{
+  display:none;
+}
+.desktopNav{
+  display:flex;
+}
+@media only screen and (min-width:320px) and (max-width:767px){
+  .navListContainer{
+    display:none;
+  }
+  .desktopNav{
+    display:none;
+  }
+  .loan_cover{
+    background: #006837;
+  }
+  .applyBtn{
+  background:lightgreen;
+  }
+  .navList{
+    line-height: 39px;
+  }
+}
