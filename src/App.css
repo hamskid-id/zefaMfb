@@ -141,7 +141,21 @@
 .desktopNav{
   display:flex;
 }
+.slick-next {
+  right: 0!important;
+}
+.slick-prev{
+  left: 0!important;
+}
+.text-chairmanmessage{
+  line-height: 55px;
+  font-size: 3.75rem;
+}
 @media only screen and (min-width:320px) and (max-width:767px){
+  .text-chairmanmessage{
+    line-height: 55px;
+    font-size: 3.25rem;
+  }
   .navListContainer{
     display:none;
   }
