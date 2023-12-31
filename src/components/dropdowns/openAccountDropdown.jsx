@@ -28,7 +28,7 @@ export const OpenAccountDropdown =()=>{
         >
             <a 
                 onClick={(e) => e.preventDefault()}
-                className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white "
+                className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm text-black "
             >
             Open Account
             </a>

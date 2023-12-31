@@ -32,7 +32,7 @@ export const BtnDropdown =()=>{
             }}
         >
             <button
-                className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn lg:text-white xl:text-white md:text-white sm:text-black xs:text-black rounded-md py-2 px-4 lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm cursor"
+                className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn text-white rounded-md py-2 px-4 text-md cursor"
             >
                 Apply For Now
             </button>
