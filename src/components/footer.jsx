@@ -6,7 +6,7 @@ export const Footer =()=>{
     const navigate = useNavigate();
     return(
         <div className="bg-brown lg:px-24 lg:py-14 xl:py-14 md:py-14 sm:py-4 xs:py-4 xl:px-24 md:px-4 sm:px-4 xs:px-4">
-        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 lg:gap-8 xl:gap-8 md:gap-2 sm:gap-2 xs:gap-2">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-8">
             <div>   
                 <div>
                     <img

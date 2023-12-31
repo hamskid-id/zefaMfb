@@ -37,7 +37,7 @@ export const Nav =({
             <div className="flex flex-row justify-between items-center mb-4 ">
                 <div className="lg:w-[20%] xl:w-[20%] md:w-[20%] sm:w-full xs:w-full lg:block xl:block md:block sm:hidden xs:hidden">
                     <img
-                        src="https://zefamfb.com/images/zefa-transparent-with-green.png"
+                        src="https://zefamfb.com/images/zefa-normal.png"
                         alt="object not found"
                         className="w-40"
                     />
