@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom"
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion} from "framer-motion";
-import {FaAlignRight } from "react-icons/fa";
-import {FaTimes } from "react-icons/fa";
 import React from 'react';
 import { variants } from "./navVarient";
 import { AboutUsDropdown } from "./dropdowns/aboutusDropdown";
@@ -15,20 +13,18 @@ export const Nav =({
 })=>{
     const navRef = useRef(null);
     const [showNavToggler,setShowNavToggler] = useState(false);
-    const handleToggle =()=>{
-        if(!showNavToggler){
-            setTimeout(()=>{
-                navRef.current?.classList.add("active");
-                setShowNavToggler(true)
-            },100)
-        }else{
-            setTimeout(()=>{
+
+    useEffect(()=>{
+
+        const checkViewWidth = ()=>{
+            if(window.innerWidth >767 && showNavToggler){
                 navRef.current?.classList.remove("active");
                 setShowNavToggler(false)
-            },400)
+            }
         }
-    }
-
+        window.addEventListener('resize',checkViewWidth)
+        return ()=> window.removeEventListener('resize',checkViewWidth)
+    })
     return(
         <div 
             className="lg:mx-24 xl:mx-24 md:mx-8 sm:m-2 xs:mx-2 xxs:mx-2 "
@@ -59,7 +55,8 @@ export const Nav =({
                         />
                     </div>
                     <Hamburger
-                        onToggle={handleToggle}
+                        toggled={showNavToggler}
+                        toggle={setShowNavToggler}
                         color="rgba(0, 0, 0, 0.702)"
                         easing="ease-in"
                         size={20}
@@ -81,7 +78,7 @@ export const Nav =({
                 <motion.div
                     animate={
                         showNavToggler ? "open": 
-                        showNavToggler===false ? 
+                        showNavToggler===false? 
                         "closed":"default"
                     }
                     ref={navRef}

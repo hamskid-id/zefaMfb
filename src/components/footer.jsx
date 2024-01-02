@@ -17,10 +17,10 @@ export const Footer =()=>{
                 </div>
                 <ul className="list-disc">
                     <li className="text-lg">Quick Links</li>
-                    <li><Link to="" className="text-white text-sm">Open an Account</Link></li>
-                    <li><Link to="" className="text-white text-sm">Apply for Loan</Link></li>
-                    <li><Link to="" className="text-white text-sm">Our Story</Link></li>
-                    <li><Link to="" className="text-white text-sm">Career</Link></li>
+                    <li><Link to="/personal_form" className="text-white text-sm">Open an Account</Link></li>
+                    <li><Link to="/loan" className="text-white text-sm">Apply for Loan</Link></li>
+                    <li><Link to="/aboutUs" className="text-white text-sm">Our Story</Link></li>
+                    <li><Link to="/career" className="text-white text-sm">Career</Link></li>
                     <li className="text-white text-sm">© 2023. All rights reserved</li>
                 </ul>
             </div> 

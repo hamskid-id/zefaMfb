@@ -13,6 +13,7 @@ import { CareerPage } from './pages/career';
 import { ContactusPage } from './pages/contactUs';
 import { LoanPage } from './pages/loan';
 import { LoanPackagePage } from './pages/loanPackage';
+import { ChairManMessagePage } from './pages/chairmanMessage';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
                 <Route exact path="/aboutUs" element={ <AboutUsPage/>}/>
                 <Route exact path="/account_type" element={ <AccountTypePage/>}/>
                 <Route exact path="/personal_form" element={ <PersonalFormPage/>}/>
-                {/* <Route exact path="/accout_opening" element={ <AccountOpe/>}/> */}
+                <Route exact path="/chairmanMessage" element={ <ChairManMessagePage/>}/>
                 <Route exact path="/application_process" element={ <ApplicationProcessPage/>}/>
                 <Route exact path="/career" element={ <CareerPage />}/>
                 <Route exact path="/contact" element={ <ContactusPage/>}/>

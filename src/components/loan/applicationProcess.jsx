@@ -32,7 +32,7 @@ export const ApplicationProcess =()=>{
         {
             key: '4',
             label: 'Step 4: We will make a credit decision',
-            children: <p>Step 4: We will make a credit decision</p>,
+            children: <p>Once we have made a credit decision, we will contact you to let you know if your application has been successful. In the event that we cannot approve your application, we will advise you of the reasons for the decline decision and identify the areas that need to be addressed.</p>,
             style: panelStyle,
           }
       ];
