@@ -21,7 +21,7 @@ export const Footer =()=>{
                     <li><Link to="/loan" className="text-white text-sm">Apply for Loan</Link></li>
                     <li><Link to="/aboutUs" className="text-white text-sm">Our Story</Link></li>
                     <li><Link to="/career" className="text-white text-sm">Career</Link></li>
-                    <li className="text-white text-sm">© 2023. All rights reserved</li>
+                    <li className="text-white text-sm">© 2024. All rights reserved</li>
                 </ul>
             </div> 
             <div>
@@ -49,7 +49,7 @@ export const Footer =()=>{
                     <li className="mb-2 text-sm">Weekdays 08.00 am - 04:00 pm</li>
                     <li className="mb-2 text-sm">0907 368 5511</li>
                     <li className="mb-2 text-sm">0903 995 2377</li>
-                    <li className="mb-2 text-sm"><a href="zefamfb@gmail.com" className="text-none text-white text-sm">Feedback/Mail</a></li>
+                    <li className="mb-2 text-sm"><a href="mailto:zefamfb@gmail.com" className="text-none text-white text-sm">Feedback/Mail</a></li>
                 </ul>
                 <div className="flex flex-wrap flex-row">
                     <span className="me-4">

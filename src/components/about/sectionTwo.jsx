@@ -54,7 +54,9 @@ export const AboutSectionTwo =()=>{
                                 style="text-black lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm text-start lg:mb-8 xl:mb-8 md:mb-8 sm:mb-4 xs:mb-4"
                                 value="The bank commenced operations on February 18, 2018. Our vision is to become a leader and a major player in the microfinance sector of Nigerian economy."
                             />
-                            <button className="bg-green text-white rounded-md py-4 px-8 lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm cursor">Read more details</button>
+                            <button
+                                onClick={()=>missionRef.current.scrollIntoView({behavior:'smooth',block:'start'})} 
+                                className="bg-green text-white rounded-md py-4 px-8 lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm cursor">Read more details</button>
                         </div>
                         <div className="bg-green flex flex-col items-center justify-center">
                             <div>

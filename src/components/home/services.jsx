@@ -31,7 +31,7 @@ export const Services =()=>{
                             image:"https://zefamfb.com/images/progress__monochromatic.svg",
                             title:"LEADERSHIP",
                             info:"We believe that the success of our business is hinged on the quality of leadership. ZEFA has assembled a winning management team comprising of mostly young and experienced hands in the industry.",
-                            btnText:"meet the team",
+                            btnText:"Meet the team",
                             route:"/aboutUs?tab=our_team"
                         },{
                             image:"https://zefamfb.com/images/undraw_stand_out_1oag.svg",

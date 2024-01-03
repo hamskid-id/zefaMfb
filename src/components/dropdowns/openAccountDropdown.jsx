@@ -9,7 +9,7 @@ export const OpenAccountDropdown =()=>{
         {
           key: '1',
           label: (
-            <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/personal_form">online Account Opening</Link>
+            <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/personal_form">Online Account Opening</Link>
           ),
         },
         {
