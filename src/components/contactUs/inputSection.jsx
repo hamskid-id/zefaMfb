@@ -1,8 +1,16 @@
 import { useForm } from "react-hook-form";
 import { MapContainer, TileLayer, Marker,Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
+import L from "leaflet";
+import MarkerClusterGroup from "react-leaflet-cluster";
 
 export const ContactInputSection =()=>{
+    delete L.Icon.Default.prototype._getIconUrl;
+    L.Icon.Default.mergeOptions({
+        iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+        iconUrl: require('leaflet/dist/images/marker-icon.png'),
+        shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+    });
     const{
         register,
         handleSubmit,
@@ -34,11 +42,13 @@ export const ContactInputSection =()=>{
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <Marker position={[6.697767, 3.342367 ]}>
-                        <Popup>
-                        27 Olambe Road, Olambe, Ifo LGA, Ogun State, Nigeria
-                        </Popup>
-                    </Marker>
+                    <MarkerClusterGroup>
+                        <Marker position={[6.697767, 3.342367 ]}>
+                            <Popup>
+                            27 Olambe Road, Olambe, Ifo LGA, Ogun State, Nigeria
+                            </Popup>
+                        </Marker>
+                    </MarkerClusterGroup>
                     </MapContainer>
             </div>
             <form onSubmit ={handleSubmit(SubmitHandler)}>
