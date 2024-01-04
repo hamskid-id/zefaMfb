@@ -16,14 +16,11 @@ export const SuccessStoryPage =()=>{
                         <div className="flex flex-col justify-center items-center mb-2">
                             <Text
                                 style="text-white mb-4 lg:text-xl xl:text-xl md:text-xl sm:text-md xs:text-md text-center font-semibold"
-                                value="About Us"
+                                value="Success Stories "
                             />
                             <div className="flex flex-col justify-center items-center xl:mb-[8rem] lg:mb-[8rem] md:mb-[8rem] sm:mb-[3rem] xs:mb-[3rem]">
                                 <div className="flex flex-wrap flex-row justify-center mb-4">
-                                    <span className="me-4 lg:text-6xl xl:text-6xl md:text-6xl sm:text-4xl xs:text-4xl text-white font-semibold text-center">
-                                        Success Stories 
-                                    </span>
-                                    <span className="c-brown lg:text-6xl xl:text-6xl md:text-6xl sm:text-4xl xs:text-4xl font-semibold text-center">
+                                    <span className="text-white lg:text-6xl xl:text-6xl md:text-6xl sm:text-4xl xs:text-4xl font-semibold text-center">
                                         Testimonials
                                     </span>
                                 </div>

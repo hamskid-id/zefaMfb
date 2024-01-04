@@ -4,15 +4,15 @@ import { Text } from "../components/text";
 export const PageNotFound =()=>{
     const navigate = useNavigate();
     return(
-        <div className="m-auto flex flex-col justify-center items-center p-4">
-            <div>
+        <div className="m-auto flex flex-col justify-center items-center p-4 h-screen">
+            <div className="m-auto flex flex-col justify-center items-center">
                 <Text
                     style="text-4xl font-extrabold text-black mb-2"
                     value="404"
                 />
                 <Text
                     style="text-xl font-semibold text-black mb-2"
-                    value="404"
+                    value="Page Not Found"
                 />
                 <button
                     onClick={()=>navigate("/")} 
