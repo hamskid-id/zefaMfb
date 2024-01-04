@@ -52,6 +52,18 @@
   background-repeat: no-repeat;
   background-image: url("https://zefamfb.com/images/smiling-office-guy\ \(1\).png");
 }
+.successBg{
+  position:absolute;
+  background-position: top;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://zefamfb.com/images/success-stories.png");
+}
 .CareersBg{
   position:absolute;
   background-position: top;
@@ -74,7 +86,7 @@
 .introContent{
   z-index: 100;
 }
-.introBg::after,.openingBg::after,.ContactBg:after,.CareersBg:after{
+.introBg::after,.openingBg::after,.ContactBg:after,.CareersBg:after,.successBg::after{
   content:"";
   position:absolute;
   inset:0;

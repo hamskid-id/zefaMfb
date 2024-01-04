@@ -88,7 +88,7 @@ export const Nav =({
                         <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm text-black" to="/">Home</Link>
                         <AboutUsDropdown/>
                         <OpenAccountDropdown/>
-                        <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm text-black" to="/?tab=testimony">Success Story</Link>
+                        <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm text-black" to="/success_stories">Success Story</Link>
                         <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm text-black" to="/contact">Contact Us</Link>
                     </div>
                     <div  className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full">

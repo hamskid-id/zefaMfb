@@ -1,24 +1,7 @@
 import Slider from "react-slick";
 import { Text } from "../text"
-import { useEffect, useRef } from "react";
-import { useSearchParams } from "react-router-dom";
 
 export const CustomerTestimoy =()=>{
-    const testimonyRef = useRef(null);
-    const [searchParams ] = useSearchParams();
-
-    useEffect(()=>{
-        const tabToScroll = searchParams.get('tab')
-        if(tabToScroll){
-            switch(tabToScroll){
-                case 'testimony':(
-                    testimonyRef.current.scrollIntoView({behavior:'smooth',block:'start'})
-                )
-                break;
-                default: return
-            }
-        }
-    },[window.location.href])
     const settings = {
         dots: true,
         infinite: true,
@@ -53,8 +36,7 @@ export const CustomerTestimoy =()=>{
         ]
       };
     return(
-        <div
-            ref={testimonyRef} 
+        <div 
             className="lg:px-24 py-14 xl:px-24 md:px-4 sm:px-4 xs:px-2 bg-whitesmoke">
             <div className="flex flex-col justify-center items-center mb-8">
                 <Text

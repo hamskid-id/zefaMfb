@@ -34,7 +34,7 @@ export const BtnDropdown =()=>{
             <button
                 className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn text-white rounded-md py-2 px-4 text-md cursor"
             >
-                Apply For Now
+                Apply For Loan
             </button>
         </Dropdown>
     )
