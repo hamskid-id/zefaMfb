@@ -7,7 +7,7 @@ export const PersonalFormPage =()=>{
         <>
             <Layout>
                 <OpeningLayout
-                    title="Account Opening Formes"
+                    title="Account Opening Forms"
                 >
                     <PersonalLayout/>
                 </OpeningLayout>
