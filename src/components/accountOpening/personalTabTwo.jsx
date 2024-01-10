@@ -3,8 +3,11 @@ import { PersonalThree } from "./personalTabThree";
 import { PersonalOne } from "./personalTabOne";
 
 export const PersonalTwo =({
-    setActiveTab
+    setActiveTab,
+    dataToSubmit,
+    setDataToSubmit
 })=>{
+    const itemStored = JSON.parse(localStorage.getItem('account_opening'));
     const{
         register,
         handleSubmit,
@@ -17,17 +20,23 @@ export const PersonalTwo =({
         phone,
         account_type
     })=>{
-        console.log(
-            Date,
-            Address,
-            Email,
-            phone,
-            account_type
+        localStorage.setItem(
+            "account_opening",
+            JSON.stringify({
+                ...itemStored,
+                Date,
+                Address,
+                Email,
+                phone,
+                account_type
+            })
         )
         setActiveTab(
             (prev)=>(
                 <PersonalThree
                     setActiveTab={setActiveTab}
+                    dataToSubmit={dataToSubmit}
+                    setDataToSubmit={setDataToSubmit}
                 />
             )
         )
@@ -79,6 +88,7 @@ export const PersonalTwo =({
                                     <input
                                         type={type}
                                         required
+                                        {...register(title,{required:true})}
                                         className="peer block text-black w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                         id={title}
                                         name={title}
@@ -97,6 +107,7 @@ export const PersonalTwo =({
                         <select
                             name="account_type" 
                             id="account_type"
+                            {...register("account_type" ,{required:true})}
                             className="lg:mb-3 xl:mb-3 md:mb-3 sm:mb-0 xs:mb-0 peer block text-black w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                         >
                             <option value="" selected>Choose...</option>
@@ -118,6 +129,8 @@ export const PersonalTwo =({
                                     (prev)=>(
                                         <PersonalOne
                                             setActiveTab={setActiveTab}
+                                            dataToSubmit={dataToSubmit}
+                                            setDataToSubmit={setDataToSubmit}
                                         />
                                     )
                                 )

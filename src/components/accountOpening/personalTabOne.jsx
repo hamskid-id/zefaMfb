@@ -2,8 +2,11 @@ import { useForm } from "react-hook-form";
 import { PersonalTwo } from "./personalTabTwo";
 
 export const PersonalOne =({
-    setActiveTab
+    setActiveTab,
+    dataToSubmit,
+    setDataToSubmit
 })=>{
+    console.log(dataToSubmit)
     const{
         register,
         handleSubmit,
@@ -11,15 +14,26 @@ export const PersonalOne =({
     }=useForm();
     const SubmitHandler =({
         Title,
-        Suraname,
+        Surname,
         firstname,
         othername,
         bvn,
         gender
     })=>{
+        localStorage.setItem(
+            "account_opening",
+            JSON.stringify({
+                Title,
+                Surname,
+                firstname,
+                othername,
+                bvn,
+                gender
+            })
+        )
         console.log(
             Title,
-            Suraname,
+            Surname,
             firstname,
             othername,
             bvn,
@@ -29,6 +43,8 @@ export const PersonalOne =({
             (prev)=>(
                 <PersonalTwo
                     setActiveTab={setActiveTab}
+                    dataToSubmit={dataToSubmit}
+                    setDataToSubmit={setDataToSubmit}
                 />
             )
         )
@@ -85,6 +101,7 @@ export const PersonalOne =({
                                     <input
                                         type={type}
                                         required
+                                        {...register(title,{required:true})}
                                         className="peer block text-black  w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-black [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                         id={title}
                                         name={title}
@@ -109,9 +126,11 @@ export const PersonalOne =({
                                 >Male
                             </label>
                             <input
+                                required
                                 type="radio"
                                 className="peer text-black block  rounded border  outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-black [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                 id="gender"
+                                {...register("gender",{required:true})}
                                 name="gender"
                                 value="Male"
                             />
@@ -125,9 +144,11 @@ export const PersonalOne =({
                                 >Female
                             </label>
                             <input
+                                required
                                 type="radio"
                                 className="peer block rounded border outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-black [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                 id="gender"
+                                {...register("gender",{required:true})}
                                 name="gender"
                                 value="Female"
                             />

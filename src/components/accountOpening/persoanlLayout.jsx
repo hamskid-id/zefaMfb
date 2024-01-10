@@ -7,12 +7,34 @@ export const PersonalLayout =()=>{
         activeTab,
         setActiveTab
     ]=useState(null);
+    const[
+        dataToSubmit,
+        setDataToSubmit
+    ]=useState(
+        {
+            Title:"",
+            Surname:"",
+            firstname:"",
+            othername:"",
+            bvn:"",
+            gender:"",
+            Date:"",
+            Address:"",
+            Email:"",
+            phone:"",
+            account_type:""
+        }
+    )
     return(
         <>
-           <AccountFormLayout title="PERSONAL ACCOUNT">
+           <AccountFormLayout>
                 {
                     activeTab == null? (
-                    <PersonalOne setActiveTab={ setActiveTab}/>
+                    <PersonalOne 
+                        setActiveTab={ setActiveTab}
+                        dataToSubmit={dataToSubmit}
+                        setDataToSubmit={setDataToSubmit}
+                    />
                     ):(
                         activeTab
                     )

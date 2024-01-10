@@ -7,27 +7,7 @@ export const LoanSectionTwo =()=>{
         handleSubmit,
         formState: {errors}
     }=useForm();
-    const SubmitHandler =({
-        Title,
-        Suraname,
-        firstname,
-        email,
-        about_us,
-        loan_type,
-        bvn,
-        phone
-    })=>{
-        console.log(
-            Title,
-            Suraname,
-            about_us,
-            loan_type,
-            firstname,
-            email,
-            bvn,
-            phone
-        )
-    }
+    
     return(
         <div className="my-14 bg-white py-14 px-4 xl:w-[73%] lg:w-[73%] md:w-[73%] sm:w-100%] xs:w-[100%] flex flex-col justify-center items-center m-auto">
             <Text
@@ -43,8 +23,10 @@ export const LoanSectionTwo =()=>{
                 value="Kindly fill all form fields with valid information"
             />
             <div className="w-full bg-white rounded-md p-4 my-4">
-                <form onSubmit ={handleSubmit(SubmitHandler)}>
+                <form target="_blank" action="https://formsubmit.co/webcontact@zefamfb.com" method="POST">
                     <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-4">
+                    <input type="hidden" name="_next" value="https://zefa.vercel.app/acct-opening-thanks.html"/>
+                    <input type="hidden" name="_subject" value="Loan Application Form Submission"/>
                     {
                         [
                             {
@@ -157,7 +139,7 @@ export const LoanSectionTwo =()=>{
                     </div>
                     </div>
                     <div>
-                        <button className="bg-green text-white rounded-md p-4 text-md cursor w-full mt-4">Submit</button>
+                        <button type="submit" className="bg-green text-white rounded-md p-4 text-md cursor w-full mt-4">Submit</button>
                     </div>
                 </form>
             </div>

@@ -23,7 +23,11 @@ export const AccountType =()=>{
                             <li className="lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm mb-2 text-black mb-2">Regular Contribution Account-Daily, Weekly or monthly (Savings or Current)</li>
                         </ul>
                         <button
-                            onClick={()=>navigate("/personal_form")} 
+                            onClick={()=>{
+                                let title="personal"
+                                navigate(`/open_account/${title}`)
+                                } 
+                            }
                             className="bg-green text-white rounded-md py-4 px-8 lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm mb-2 cursor">Open Personal Account</button>
                     </div>
                     <div className="mb-8 bg-white rounded-md lg:p-8 xl:p-8 md:p-8 sm:p-4 xs:p-2">
@@ -36,7 +40,11 @@ export const AccountType =()=>{
                             <li className="lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm mb-2 text-black mb-2">Salary Account (Savings or current)</li>
                         </ul>
                         <button
-                            onClick={()=>navigate("/personal_form")} 
+                            onClick={()=>{
+                                let title="corporate"
+                                navigate(`/open_account/${title}`)
+                                } 
+                            } 
                             className="bg-green text-white rounded-md py-4 px-8 lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm mb-2 cursor">Open Corporate Account</button>
                     </div>
 

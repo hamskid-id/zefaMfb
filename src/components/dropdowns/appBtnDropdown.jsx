@@ -1,10 +1,11 @@
 import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
 import { Link } from 'react-router-dom';
+import { Text } from '../text';
 
 
 
-export const BtnDropdown =()=>{
+export const BtnDropdown =({type})=>{
     const items =[
         {
           key: '1',
@@ -26,16 +27,33 @@ export const BtnDropdown =()=>{
         }
     ];
     return(
-        <Dropdown
-            menu={{
-                items
-            }}
-        >
-            <button
-                className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn text-white rounded-md py-2 px-4 text-md cursor"
+      <>
+        {
+          type?(
+            <Dropdown
+                menu={{
+                    items
+                }}
             >
-                Apply For Loan
-            </button>
-        </Dropdown>
+                <Text
+                    style="text-sm text-black"
+                    value="Apply for Loan"
+                />
+            </Dropdown>
+          ):(
+            <Dropdown
+                menu={{
+                    items
+                }}
+            >
+                <button
+                    className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn text-white rounded-md py-2 px-4 text-md cursor"
+                >
+                    Apply for Loan
+                </button>
+            </Dropdown>
+          )
+        }
+      </>
     )
 }

@@ -1,4 +1,3 @@
-import { useForm } from "react-hook-form";
 import { MapContainer, TileLayer, Marker,Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import L from "leaflet";
@@ -14,24 +13,7 @@ export const ContactInputSection =()=>{
         iconUrl:iconUrl,
         shadowUrl: shadowUrl
     });
-    const{
-        register,
-        handleSubmit,
-        formState: {errors}
-    }=useForm();
-    const SubmitHandler =({
-        Suraname,
-        email,
-        subject,
-        message
-    })=>{
-        console.log(
-            Suraname,
-            email,
-            subject,
-            message
-        )
-    }
+    
     return(
         <div className="bg-white lg:px-24 py-14 xl:px-24 md:px-4 sm:px-4 xs:px-2 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 lg:gap-12 xl:gap-12 md:gap-2 sm:gap-2 xs:gap-2">
             <div className="h-[50vh] w-full">
@@ -54,8 +36,10 @@ export const ContactInputSection =()=>{
                     </MarkerClusterGroup>
                     </MapContainer>
             </div>
-            <form onSubmit ={handleSubmit(SubmitHandler)}>
-                    <div className="flex flex-col justify-between">
+            <form  target="_blank" action="https://formsubmit.co/webcontact@zefamfb.com" method="POST">
+                <div className="flex flex-col justify-between">
+                    <input type="hidden" name="_next" value="https://zefa.vercel.app/contact-thanks.html"/>
+                    <input type="hidden" name="_subject" value="Contact Form Submission"/>
                     {
                         [
                             {
@@ -122,8 +106,11 @@ export const ContactInputSection =()=>{
                         </div>
                     </div>
                     <div>
-                        <button className="bg-green text-white rounded-md p-4 text-md cursor w-full text-center">Submit Request</button>
-                    </div>
+                    <button 
+                        type="submit"
+                        className="bg-green text-white rounded-md p-4 text-md cursor w-full text-center">Contact Us
+                    </button>
+                </div>
                 </form>
         </div>
     )

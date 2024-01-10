@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 
 
 export const OpenAccountDropdown =()=>{
+    const title ="personal";
     const items = [
         {
           key: '1',
           label: (
-            <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/personal_form">Online Account Opening</Link>
+            <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to={`/open_account/${title}`}>Online Account Opening</Link>
           ),
         },
         {

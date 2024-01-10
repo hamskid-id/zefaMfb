@@ -30,7 +30,7 @@ export const Nav =({
             className="lg:mx-24 xl:mx-24 md:mx-8 sm:m-2 xs:mx-2 xxs:mx-2 "
             ref={scrollToViewRef}
         >
-            <div className="flex flex-row justify-between items-center mb-4 ">
+            <div className="flex flex-row justify-between items-center mb-4 border-danger">
                 <div className="lg:w-[20%] xl:w-[20%] md:w-[20%] sm:w-full xs:w-full lg:block xl:block md:block sm:hidden xs:hidden">
                     <img
                         src="https://zefamfb.com/images/zefa-normal.png"
@@ -38,11 +38,21 @@ export const Nav =({
                         className="w-40"
                     />
                 </div>
-                <div className="flex flex-row justify-between lg:w-[30%] xl:w-[30%] md:w-[50%] sm:w-full xs:w-full lg:mt-auto xl:mt-auto md:mt-auto sm:mt-4 xs:mt-4">
-                    <Link className="text-sm text-black" to="/aboutUs?tab=mission">Mission</Link>
-                    <Link className="text-sm text-black" to="/career">Career</Link>
-                    <Link className="text-sm text-black" to="/aboutUs?tab=differentiators">Differentiators</Link>
-                    <Link className="text-sm text-black" to="/contact">Contacts</Link>
+                <div className="lg:w-[30%] xl:w-[30%] md:w-[50%] sm:w-full xs:w-full ">
+                    <div className="lg:flex xl:flex md:flex sm:hidden xs:hidden flex-row justify-between items-center">
+                        <Link className="text-sm text-black" to="/aboutUs?tab=mission">Mission</Link>
+                        <Link className="text-sm text-black" to="/career">Career</Link>
+                        <Link className="text-sm text-black" to="/aboutUs?tab=differentiators">Differentiators</Link>
+                        <Link className="text-sm text-black" to="/contact">Contacts</Link>
+                    </div>
+                    <div
+                        className="lg:hidden xl:hidden md:hidden sm:flex xs:flex flex-row justify-between w-full items-center lg:mt-auto xl:mt-auto md:mt-auto sm:mt-4 xs:mt-4">
+                        
+                        <OpenAccountDropdown/>
+                        <AboutUsDropdown/>
+                        <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm text-black" to="/contact">Contact Us</Link>
+                        <BtnDropdown type="text"/>
+                    </div>
                 </div>
             </div>
             <div className="flex lg:flex-row xl:flex-row md:flex-row sm:flex-col xs:flex-col xxs:flex-col xs:p-2 xxs:p-2 lg:px-4 xl:px-4 md:px-4 lg:py-2 xl:py-2 md:py-2  rounded justify-between items-center loan_cover mb-2">

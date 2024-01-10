@@ -1,9 +1,23 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { PersonalTwo } from "./personalTabTwo";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 export const PersonalThree =({
-    setActiveTab
+    setActiveTab,
+    setDataToSubmit,
+    dataToSubmit
 })=>{
+    const itemStored = JSON.parse(localStorage.getItem('account_opening'));
+    const[
+        isLoading,
+        setIsLaoding
+    ]= useState(false);
+    const{
+        title
+    }=useParams();
     const[
         fileInputs,
         setFileInputs
@@ -17,7 +31,101 @@ export const PersonalThree =({
         formState: { errors } 
     } = useForm();
     const SubmitHandler =()=>{
-        console.log( fileInputs.pass, fileInputs.signature)
+    var formData = new FormData();
+    const{
+            Title,
+            Surname,
+            firstname,
+            othername,
+            bvn,
+            gender,
+            Date,
+            Address,
+            Email,
+            phone,
+            account_type
+        }=itemStored;
+        console.log(itemStored);
+        
+    [
+        {
+            title:"Passport",
+            value:fileInputs.pass
+       },{
+            title:"Signature",
+            value:fileInputs.signature
+        },{
+            title:"title",
+            value:Title
+       },{
+            title:"Surname",
+            value:Surname
+        },{
+            title:"firstname",
+            value:firstname
+        },{
+            title:"othername",
+            value:othername
+        },{
+            title:"bvn",
+            value: bvn
+        },{
+            title:"gender",
+            value:gender
+        },{
+            title:"Date",
+            value:Date
+        },{
+            title:"Address",
+            value:Address
+        },{
+            title:" Email",
+            value: Email
+        },{
+            title:"Account type",
+            value:account_type
+        },{
+            title:"Phone",
+            value:phone
+        },{
+            title:"Account type",
+            value:account_type
+        },{
+            title:"_next",
+            value:"https://zefa.vercel.app/acct-opening-thanks.html"
+        },{
+            title:"_subject",
+            value:title ==="personal"?"Personal Account Form Submission":"Corporate Account Form Submission"
+        }
+    ].forEach((info)=>{
+        const{
+            title,
+            value
+        }=info;
+        formData.append(title,value);
+    })
+    const sendData = async()=>{
+        try{
+            setIsLaoding(true)
+            const response = await axios.post(
+                "https://formsubmit.co/ajax/webcontact@zefamfb.com",
+                formData,
+                {
+                    headers:{
+                        'Content-Type':"multipart/form-data"
+                    }
+                }
+            );
+            const data = response?.data;
+            setIsLaoding(false)
+            toast.success('Application Successfully sent')
+        }catch(error){
+            setIsLaoding(false)
+            console.log(error)
+            toast.error(error?.response?.data?.message)
+        }
+    }
+    sendData();
     }
     return(
         <>
@@ -69,13 +177,17 @@ export const PersonalThree =({
                                     (prev)=>(
                                         <PersonalTwo
                                             setActiveTab={setActiveTab}
+                                            dataToSubmit={dataToSubmit}
+                                            setDataToSubmit={setDataToSubmit}
                                         />
                                     )
                                 )
                             }}
                         >Prev</div>
-                        <button className="bg-green text-white rounded-md p-4 text-md cursor">Submit</button>
-                    </div>
+                        {
+                            isLoading?<div className="bg-green text-white rounded-md p-4 text-md cursor">Sending...</div>:<button className="bg-green text-white rounded-md p-4 text-md cursor">Submit</button>
+                        }
+                        </div>
                 </form>
         </>
     )

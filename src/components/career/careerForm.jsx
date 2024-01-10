@@ -54,8 +54,10 @@ export const CareerForm =()=>{
             />
             <hr className="text-black"/>
             <div className="w-full bg-white rounded-md p-4 my-4">
-                <form onSubmit ={handleSubmit(SubmitHandler)}>
+                <form action="https://formsubmit.co/webcontact@zefamfb.com" encType="multipart/form-data" method="POST">
                     <div className="mb-4 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-4">
+                    <input type="hidden" name="_next" value="https://zefa.vercel.app/acct-opening-thanks.html"/>
+                    <input type="hidden" name="_subject" value="Career Form Submission"/>
                     {
                         [
                             {
@@ -115,7 +117,8 @@ export const CareerForm =()=>{
                             >Jobs Im interested in (**you can select multiple categories)
                         </label>
                         <select 
-                            multiple="" 
+                            multiple
+                            name="jobsInterest"
                             className="peer block text-black  w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-black [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" 
                             required
                             id="jobsInterest"
@@ -202,7 +205,7 @@ export const CareerForm =()=>{
                         ></textArea>
                     </div>
                     <div>
-                        <button className="bg-green text-white rounded-md p-4 text-md cursor w-full mt-4">Submit Request</button>
+                        <button type="submit" className="bg-green text-white rounded-md p-4 text-md cursor w-full mt-4">Submit Request</button>
                     </div>
                 </form>
             </div>

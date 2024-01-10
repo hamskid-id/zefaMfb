@@ -1,6 +1,5 @@
 import './App.css'
 import {BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { HomePage } from './pages/home';
 import { AboutUsPage } from './pages/about';
@@ -16,6 +15,7 @@ import { LoanPackagePage } from './pages/loanPackage';
 import { ChairManMessagePage } from './pages/chairmanMessage';
 import { SuccessStoryPage } from './pages/successStory';
 import { PageNotFound } from './pages/404';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -27,6 +27,7 @@ function App() {
                 <Route exact path="/" element={ <HomePage/>}/>
                 <Route exact path="/aboutUs" element={ <AboutUsPage/>}/>
                 <Route exact path="/account_type" element={ <AccountTypePage/>}/>
+                <Route exact path="/open_account/:title" element={ <PersonalFormPage/>}/>
                 <Route exact path="/personal_form" element={ <PersonalFormPage/>}/>
                 <Route exact path="/chairmanMessage" element={ <ChairManMessagePage/>}/>
                 <Route exact path="/application_process" element={ <ApplicationProcessPage/>}/>
@@ -38,7 +39,10 @@ function App() {
                 <Route exact path="*" element={ <PageNotFound/>}/>
               </Routes>
         </Router>
-        <ToastContainer />
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
       {/* </Provider> */}
     </>
   )
