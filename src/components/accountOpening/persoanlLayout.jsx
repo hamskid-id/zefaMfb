@@ -1,43 +1,30 @@
 import { useState } from "react";
 import { PersonalOne } from "./personalTabOne";
 import { AccountFormLayout } from "./accountFormLayout";
+import { useParams } from "react-router-dom";
+import { CorporateOne } from "./corporateTabOne";
 
 export const PersonalLayout =()=>{
+    const{
+        title
+    }=useParams();
     const[
         activeTab,
         setActiveTab
     ]=useState(null);
-    const[
-        dataToSubmit,
-        setDataToSubmit
-    ]=useState(
-        {
-            Title:"",
-            Surname:"",
-            firstname:"",
-            othername:"",
-            bvn:"",
-            gender:"",
-            Date:"",
-            Address:"",
-            Email:"",
-            phone:"",
-            account_type:""
-        }
-    )
     return(
         <>
            <AccountFormLayout>
                 {
-                    activeTab == null? (
-                    <PersonalOne 
-                        setActiveTab={ setActiveTab}
-                        dataToSubmit={dataToSubmit}
-                        setDataToSubmit={setDataToSubmit}
-                    />
-                    ):(
-                        activeTab
-                    )
+                    activeTab == null && title ==="personal"? (
+                        <PersonalOne 
+                            setActiveTab={ setActiveTab}
+                        />
+                    ): activeTab == null && title ==="corporate"?(
+                        <CorporateOne 
+                            setActiveTab={ setActiveTab}
+                        />
+                    ):activeTab
                 }
             </AccountFormLayout> 
         </>

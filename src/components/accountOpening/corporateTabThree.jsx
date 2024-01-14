@@ -1,11 +1,11 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { PersonalTwo } from "./personalTabTwo";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { CorporateTwo } from "./corporateTabTwo";
 
-export const PersonalThree =({
+export const CorporateThree =({
     setActiveTab
 })=>{
     const itemStored = JSON.parse(localStorage.getItem('account_opening'));
@@ -20,8 +20,8 @@ export const PersonalThree =({
         fileInputs,
         setFileInputs
     ]= useState({
-        signature:null,
-        pass:null
+        cSignature:null,
+        cPass:null
     })
     const { 
         register, 
@@ -31,63 +31,52 @@ export const PersonalThree =({
     const SubmitHandler =()=>{
     var formData = new FormData();
     const{
-            Title,
-            Surname,
-            firstname,
-            othername,
-            bvn,
-            gender,
-            Date,
-            Address,
-            Email,
-            phone,
-            account_type
+            companyName,
+            nameOfBusiness,
+            date,
+            directorsBvn,
+            bWebsite,
+            contactPerson,
+            bAddress,
+            bEmail,
+            bphone
         }=itemStored;
         console.log(itemStored);
         
     [
         {
-            title:"Passport",
-            value:fileInputs.pass
+            title:"Contact Passport",
+            value:fileInputs.cPass
        },{
-            title:"Signature",
-            value:fileInputs.signature
+            title:"Contact Signature",
+            value:fileInputs.cSignature
         },{
-            title:"title",
-            value:Title
+            title:"Business Address",
+            value:bAddress
        },{
-            title:"Surname",
-            value:Surname
+            title:"Business Email",
+            value:bEmail
         },{
-            title:"firstname",
-            value:firstname
+            title:"Business Website",
+            value:bWebsite
         },{
-            title:"othername",
-            value:othername
+            title:"Business Phone Number",
+            value:bphone
         },{
-            title:"bvn",
-            value: bvn
+            title:"Contact person",
+            value: contactPerson
         },{
-            title:"gender",
-            value:gender
+            title:"Name of Company",
+            value:companyName
         },{
-            title:"Date",
-            value:Date
+            title:"Nature of Business",
+            value:nameOfBusiness
         },{
-            title:"Address",
-            value:Address
+            title:"Year of registration",
+            value:date
         },{
-            title:" Email",
-            value: Email
-        },{
-            title:"Account type",
-            value:account_type
-        },{
-            title:"Phone",
-            value:phone
-        },{
-            title:"Account type",
-            value:account_type
+            title:" Bvns of direactors",
+            value: directorsBvn
         },{
             title:"_next",
             value:"https://zefa.vercel.app/acct-opening-thanks.html"
@@ -115,6 +104,7 @@ export const PersonalThree =({
                 }
             );
             const data = response?.data;
+            console.log(data);
             setIsLaoding(false)
             toast.success(data?.message);
             localStorage.removeItem('account_opening');
@@ -135,17 +125,17 @@ export const PersonalThree =({
                         >
                             
                             <label
-                                htmlFor={"signature"}
+                                htmlFor={"cSignature"}
                                 className="pointer-events-none text-sm origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out  dark:text-neutral-200 dark:peer-focus:text-primary"
-                            >Upload Signature
+                            >Upload cSignature of contact
                             </label>
                             <input
                                 type="file"
-                                name="signature"
+                                name="cSignature"
                                 className="peer block text-black w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                id={"signature"}
+                                id={"cSignature"}
                                 onChange ={(e)=>setFileInputs((prev)=>{
-                                    return{...prev,signature:e.target.files[0]}
+                                    return{...prev,cSignature:e.target.files[0]}
                                 })}
                                 />
                         </div>
@@ -155,15 +145,15 @@ export const PersonalThree =({
                             <label
                                 htmlFor={`exampleFormControlInput4`}
                                 className="pointer-events-none text-sm origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out  dark:text-neutral-200 dark:peer-focus:text-primary"
-                            >Passport
+                            >Upload Passport of contact
                             </label>
                             <input
                                 type="file"
-                                name="Passport"
+                                name="cPassport"
                                 className="peer block text-black w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                 id={`exampleFormControlInput4`}
                                 onChange ={(e)=>setFileInputs((prev)=>{
-                                    return{...prev,pass:e.target.files[0]}
+                                    return{...prev,cPass:e.target.files[0]}
                                 })}
                                 />
                         </div>
@@ -174,7 +164,7 @@ export const PersonalThree =({
                             onClick={()=>{
                                 setActiveTab(
                                     (prev)=>(
-                                        <PersonalTwo
+                                        <CorporateTwo
                                             setActiveTab={setActiveTab}
                                         />
                                     )

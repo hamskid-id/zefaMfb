@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import { PersonalThree } from "./personalTabThree";
-import { PersonalOne } from "./personalTabOne";
+import { CorporateThree } from "./corporateTabThree";
+import { CorporateOne } from "./corporateTabOne";
 
-export const PersonalTwo =({
+export const CorporateTwo =({
     setActiveTab
 })=>{
     const itemStored = JSON.parse(localStorage.getItem('account_opening'));
@@ -12,26 +12,26 @@ export const PersonalTwo =({
         formState: {errors}
     }=useForm();
     const SubmitHandler =({
-        Date,
-        Address,
-        Email,
-        phone,
-        account_type
+        bWebsite,
+        bAddress,
+        bEmail,
+        bphone,
+        contactPerson
     })=>{
         localStorage.setItem(
             "account_opening",
             JSON.stringify({
                 ...itemStored,
-                Date,
-                Address,
-                Email,
-                phone,
-                account_type
+                bWebsite,
+                contactPerson,
+                bAddress,
+                bEmail,
+                bphone
             })
         )
         setActiveTab(
             (prev)=>(
-                <PersonalThree
+                <CorporateThree
                     setActiveTab={setActiveTab}
                 />
             )
@@ -44,25 +44,30 @@ export const PersonalTwo =({
                     {
                         [
                             {
-                                title:"Date",
-                                holder:"Enter preffered date",
-                                type:"date",
-                                label:"Date"
-                            },{
-                                title:"Address",
-                                holder:"Enter Address",
+                                title:"bWebsite",
+                                holder:"Enter business website",
                                 type:"text",
-                                label:"Address"
+                                label:"Bsiness website"
                             },{
-                                title:"Email",
-                                holder:"Enter Email",
+                                title:"bAddress",
+                                holder:"Enter business address",
+                                type:"text",
+                                label:"Business Address"
+                            },{
+                                title:"bEmail",
+                                holder:"Enter business email",
                                 type:"email",
-                                label:"Email"
+                                label:"Business email"
                             },{
-                                title:"phone",
-                                holder:"Enter phone number",
+                                title:"bphone",
+                                holder:"Enter business phone number",
                                 type:"tel",
-                                label:"Phone Number"
+                                label:"Business Phone Number"
+                            },{
+                                title:"contactPerson",
+                                holder:"Enter contact person's name",
+                                type:"text",
+                                label:"Contact Person"
                             }
                         ].map((info,index)=>{
                             const{
@@ -94,28 +99,6 @@ export const PersonalTwo =({
                             )
                         })
                     }
-                    <div className="flex flex-col">
-                        <label
-                            htmlFor="account_type"
-                            className="pointer-events-none max-w-[90%] origin-[0_0] truncate leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                            >Account Type
-                        </label>
-                        <select
-                            name="account_type" 
-                            id="account_type"
-                            {...register("account_type" ,{required:true})}
-                            className="lg:mb-3 xl:mb-3 md:mb-3 sm:mb-0 xs:mb-0 peer block text-black w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        >
-                            <option value="" selected>Choose...</option>
-                            <option value="savings-regular">
-                                Savings Account (Regular)
-                           </option>
-                           <option value="savings-target">
-                                Savings Account (Target)
-                           </option>
-                           <option value="current">Current Account</option>
-                        </select>
-                    </div>
                     </div>
                     <div className="flex flex-row">
                         <div 
@@ -123,7 +106,7 @@ export const PersonalTwo =({
                             onClick={()=>{
                                 setActiveTab(
                                     (prev)=>(
-                                        <PersonalOne
+                                        <CorporateOne
                                             setActiveTab={setActiveTab}
                                         />
                                     )

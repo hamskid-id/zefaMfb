@@ -2,11 +2,8 @@ import { useForm } from "react-hook-form";
 import { PersonalTwo } from "./personalTabTwo";
 
 export const PersonalOne =({
-    setActiveTab,
-    dataToSubmit,
-    setDataToSubmit
+    setActiveTab
 })=>{
-    console.log(dataToSubmit)
     const{
         register,
         handleSubmit,
@@ -43,8 +40,6 @@ export const PersonalOne =({
             (prev)=>(
                 <PersonalTwo
                     setActiveTab={setActiveTab}
-                    dataToSubmit={dataToSubmit}
-                    setDataToSubmit={setDataToSubmit}
                 />
             )
         )
