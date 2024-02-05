@@ -36,7 +36,7 @@ export const BtnDropdown =({type})=>{
                 }}
             >
                 <Text
-                    style="text-sm text-black"
+                    style="text-sm text-white"
                     value="Apply for Loan"
                 />
             </Dropdown>
@@ -47,7 +47,7 @@ export const BtnDropdown =({type})=>{
                 }}
             >
                 <button
-                    className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn text-white rounded-md py-2 px-4 text-md cursor"
+                    className="border lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn text-white rounded-md py-2 px-4 text-md cursor"
                 >
                     Apply for Loan
                 </button>

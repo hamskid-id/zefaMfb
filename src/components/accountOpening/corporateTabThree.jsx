@@ -25,6 +25,7 @@ export const CorporateThree =({
     })
     const { 
         register, 
+        watch,
         handleSubmit, 
         formState: { errors } 
     } = useForm();
@@ -34,7 +35,6 @@ export const CorporateThree =({
             companyName,
             nameOfBusiness,
             date,
-            directorsBvn,
             bWebsite,
             contactPerson,
             bAddress,
@@ -75,11 +75,8 @@ export const CorporateThree =({
             title:"Year of registration",
             value:date
         },{
-            title:" Bvns of direactors",
-            value: directorsBvn
-        },{
             title:"_next",
-            value:"https://zefa.vercel.app/acct-opening-thanks.html"
+            value:"https://zefa-microfinace.vercel.app/thank-you"
         },{
             title:"_subject",
             value:title ==="personal"?"Personal Account Form Submission":"Corporate Account Form Submission"
@@ -104,9 +101,16 @@ export const CorporateThree =({
                 }
             );
             const data = response?.data;
-            console.log(data);
-            setIsLaoding(false)
-            toast.success(data?.message);
+            const{
+                success,
+                message
+            }=data;
+            setIsLaoding(false);
+            if(success){
+                toast.success(message);
+            }else{
+                toast.error(message);
+            }
             localStorage.removeItem('account_opening');
         }catch(error){
             setIsLaoding(false)
@@ -158,7 +162,7 @@ export const CorporateThree =({
                                 />
                         </div>
                     </div>
-                    <div className="flex flex-row">
+                    <div className="flex flex-row items-center justify-between">
                         <div 
                             className="bg-danger text-white rounded-md p-4 text-md cursor me-4 w-fit"
                             onClick={()=>{

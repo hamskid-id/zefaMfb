@@ -52,6 +52,17 @@
   background-repeat: no-repeat;
   background-image: url("https://zefamfb.com/images/smiling-office-guy\ \(1\).png");
 }
+.SlideBg{
+  position:absolute;
+  background-position: top;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .successBg{
   position:absolute;
   background-position: top;
@@ -83,14 +94,19 @@
   z-index:100;
   background:whitesmoke;
 }
-.introContent{
-  z-index: 100;
+.home-slide{
+  transform: translate3d(0px, 0px, 0px) scale(1.02944, 1.02944);
+  transform-origin: 0% 0% 0px;
 }
-.introBg::after,.openingBg::after,.ContactBg:after,.CareersBg:after,.successBg::after{
+
+.introContent{
+  z-index: 1;
+}
+.introBg::after,.openingBg::after,.ContactBg:after,.CareersBg:after,.successBg::after,.SlideBg::after{
   content:"";
   position:absolute;
   inset:0;
-  background-image: linear-gradient(0deg, hsla(250,5%,5%,1),hsla(250,3%,3%,0.3));
+  background-image: linear-gradient(0deg, hsla(250,5%,5%,0.8),hsla(250,3%,3%,0.2));
 }
 .bg-brown{
   background:#252d3a;
@@ -141,6 +157,45 @@
 .read-the-docs {
   color: #888;
 }
+.team-card{
+  cursor:pointer;
+}
+.team-card:hover .team-caption{
+  max-height: 100%;
+  visibility: visible;
+} 
+.team-caption {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: max-height 2s ease;
+}
+
+.team-caption:hover .caption-p{
+  color:darkolivegreen;
+}
+.home-testimony-card:hover{
+  background-color: rgba(255, 217, 0, 0.671);
+}
+.home-testimony-card{
+  background: #006837;
+  transition: background-color 2s ease;
+}
+.caption-p{
+  color:white;
+}
+.bg-thank-You{
+  background-image:linear-gradient(160deg, #006837 40%, white 100%,  #006837 100%)
+}
+/* .team-caption{
+  height: 0;
+} */
+.translate-text{
+  z-index: 100;
+  transform:translateY(0) scale(1); 
+  opacity:1;
+  animation:translateAnimationTwo 1s ease;
+}
 .loan_cover,.caption{
   background: rgba(255, 255, 255, 0.748);
 }
@@ -176,5 +231,20 @@
   }
   .navList{
     line-height: 39px;
+  }
+  .loan_cover,.bg_transparent{
+    background:#006837;
+    z-index: 100;
+  }
+}
+
+@keyframes  translateAnimationTwo {
+  0% {
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }

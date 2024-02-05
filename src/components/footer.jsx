@@ -67,10 +67,6 @@ export const Footer =()=>{
                 </div>
             </div>
          </div>
-         <Text
-            style="text-sm text-center mt-8"
-            value="Licenced By Central Bank of Nigeria."
-        />
          </div>
     )
 }

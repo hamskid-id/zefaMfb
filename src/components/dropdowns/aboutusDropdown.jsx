@@ -9,31 +9,31 @@ export const AboutUsDropdown =()=>{
         {
           key:'1',
           label: (
-            <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs">About Zefa</Link>
+            <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs">About Zefa</Link>
           ),
         },
         {
           key: '2',
           label: (
-            <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=mission">Our mission</Link>
+            <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=mission">Our mission</Link>
           ),
         },
         {
           key: '3',
           label: (
-            <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=differentiators">Differentiator</Link>
+            <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=differentiators">Differentiator</Link>
           ),
         },
         {
           key: '4',
           label:(
-            <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=our_core_values">Our core values</Link>
+            <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=our_core_values">Our core values</Link>
           )
         },
         {
             key: '5',
             label:(
-              <Link className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=our_team">Our team</Link>
+              <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=our_team">Our team</Link>
             )
           },
     ];
@@ -46,7 +46,7 @@ export const AboutUsDropdown =()=>{
         > 
             <a 
                 onClick={(e) => e.preventDefault()}
-                className="lg:text-md xl:text-md md:text-md my-2 sm:text-sm xs:text-sm text-black "
+                className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-[#006837] xl:text-[#006837] sm:text-white md:text-[#006837] xs:text-white"
             >
             About Us
             </a>

@@ -6,7 +6,7 @@ export const ChairManSection =()=>{
         <div className="bg-white lg:px-24 py-8 xl:px-24 md:px-4 sm:px-4 xs:px-2 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 lg:gap-12 xl:gap-12 md:gap-2 sm:gap-2 xs:gap-2">
             <div className="flex flex-col items-start">
                 <Text
-                    style="font-extrabold text-chairmanmessage text-black mb-2"
+                    style="font-medium text-chairmanmessage text-black mb-2"
                     value="The Chairman's Message"
                 />
                 <Text

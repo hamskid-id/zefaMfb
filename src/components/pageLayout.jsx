@@ -12,7 +12,7 @@ export const Layout =({
             <Nav
                 scrollToViewRef={scrollToViewRef}
             />
-            <div>
+            <div ref={scrollToViewRef}>
                 {children}
             </div>
             <GotoTop scrollToViewRef={scrollToViewRef}/>

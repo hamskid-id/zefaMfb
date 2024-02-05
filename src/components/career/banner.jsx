@@ -4,7 +4,7 @@ export const CareersBanner =()=>{
     return(
     <>
     <div 
-        className="w-100 relative introContainer flex flex-column justify-center lg:pt-[16rem] xl:pt-[16rem] md:pt-[16rem] sm:pt-[8rem] xs:pt-[8rem] lg:mt-auto xl:mt-auto md:mt-auto sm:mt-2 xs:mt-2 "
+        className="w-100 relative introContainer flex flex-column justify-center lg:pt-[23rem] xl:pt-[23rem] md:pt-[23rem] sm:pt-[10rem] xs:pt-[10rem]"
     >
         <div className="CareersBg">
         </div>

@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { Text } from "../text"
 import { useState } from "react";
+import { AiFillDislike, AiFillLike } from "react-icons/ai";
+import { InputField } from "../formField";
 
 export const CareerForm =()=>{
     const[
@@ -11,9 +13,13 @@ export const CareerForm =()=>{
     })
     const{
         register,
+        watch,
         handleSubmit,
         formState: {errors}
     }=useForm();
+    const jobsInterest = watch("jobsInterest")
+    const jobsType = watch("jobsType")
+    const message = watch("message")
     const SubmitHandler =({
         jobsInterest,
         Suraname,
@@ -56,61 +62,52 @@ export const CareerForm =()=>{
             <div className="w-full bg-white rounded-md p-4 my-4">
                 <form action="https://formsubmit.co/webcontact@zefamfb.com" encType="multipart/form-data" method="POST">
                     <div className="mb-4 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-4">
-                    <input type="hidden" name="_next" value="https://zefa.vercel.app/acct-opening-thanks.html"/>
+                    <input type="hidden" name="_next" value="https://zefa-microfinace.vercel.app/thank-you"/>
                     <input type="hidden" name="_subject" value="Career Form Submission"/>
                     {
                         [
                             {
-                                jobsInterest:"Surname",
+                                labelTitle:"Surname",
                                 holder:"Enter surname",
                                 type:"text",
                                 label:"Surname"
                             },{
-                                jobsInterest:"firstname",
+                                labelTitle:"firstname",
                                 holder:"Enter firstname",
                                 type:"text",
                                 label:"First name"
                             },{
-                                jobsInterest:"email",
+                                labelTitle:"email",
                                 holder:"Enter your email",
                                 type:"email",
                                 label:"Email"
                             },{
-                                jobsInterest:"phone",
+                                labelTitle:"phone",
                                 holder:"Enter phone number",
                                 type:"tel",
                                 label:"Phone Number"
                             }
                         ].map((info,index)=>{
                             const{
-                                jobsInterest,
+                                labelTitle,
                                 holder,
                                 type,
                                 label
                             }=info;
                             return(
-                                <div 
-                                    className="lg:mb-3 xl:mb-3 md:mb-3 sm:mb-0 xs:mb-0 flex flex-col justify-start"
+                                <InputField 
+                                    labelTitle={labelTitle}
                                     key={index}
-                                >
-                                    <label
-                                        htmlFor={jobsInterest}
-                                        className="pointer-events-none max-w-[90%] origin-[0_0] truncate leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-black peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-black"
-                                        >{label}
-                                    </label>
-                                    <input
-                                        type={type}
-                                        required
-                                        className="peer block text-black  w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-black [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                                        id={jobsInterest}
-                                        name={jobsInterest}
-                                        placeholder={holder} 
-                                    />
-                                </div>
+                                    inputType={type}
+                                    labelName={label}
+                                    watch={watch}
+                                    register={register}
+                                    placeholder={holder}
+                                />
                             )
                         })
                     }
-                    <div className="flex flex-col">
+                    <div className="flex flex-col relative">
                         <label
                             htmlFor="jobsInterest"
                             className="pointer-events-none max-w-[90%] origin-[0_0] truncate leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -119,6 +116,7 @@ export const CareerForm =()=>{
                         <select 
                             multiple
                             name="jobsInterest"
+                            {...register("jobsInterest",{required:true})}
                             className="peer block text-black  w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-black [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" 
                             required
                             id="jobsInterest"
@@ -150,8 +148,11 @@ export const CareerForm =()=>{
                                 Sales/Business Development
                             </option>
                         </select>
+                        <div className="absolute top-[2rem] right-[1.5rem]">
+                            { jobsInterest ? <AiFillLike size="1rem" color="#a7f3d0"/>:<AiFillDislike size="1rem" color="#fecdd3"/>}
+                        </div>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col relative">
                         <label
                             htmlFor="jobsType"
                             className="pointer-events-none max-w-[90%] origin-[0_0] truncate leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
@@ -160,6 +161,7 @@ export const CareerForm =()=>{
                         <select 
                             className="peer block text-black  w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-black [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0" 
                             id="jobsType" 
+                            {...register("jobsType",{required:true})}
                             required
                         >
                             <option value="">Select a job type</option>
@@ -167,6 +169,9 @@ export const CareerForm =()=>{
                             <option value="part-time">Part Time</option>
                             <option value="any">Any</option>
                         </select>
+                        <div className="absolute top-[2rem] right-[0.5rem]">
+                            { jobsType ? <AiFillLike size="1rem" color="#a7f3d0"/>:<AiFillDislike size="1rem" color="#fecdd3"/>}
+                        </div>
                     </div>
                     </div>
                     <div 
@@ -188,7 +193,7 @@ export const CareerForm =()=>{
                             />
                     </div>
                     <div 
-                        className="lg:mb-3 xl:mb-3 md:mb-3 sm:mb-0 xs:mb-0 flex flex-col justify-start"
+                        className="lg:mb-3 xl:mb-3 md:mb-3 sm:mb-0 xs:mb-0 flex flex-col justify-start relative"
                     >
                         <label
                             htmlFor="message"
@@ -200,9 +205,13 @@ export const CareerForm =()=>{
                             required
                             className="peer block text-black  w-full rounded border bg-transparent px-3 py-[0.37rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-black data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-black [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                             id="message"
+                            {...register("message",{required:true})}
                             name="message"
                             placeholder="Write your cover letter..." 
                         ></textArea>
+                        <div className="absolute top-[2rem] right-[0.5rem]">
+                            { message ? <AiFillLike size="1rem" color="#a7f3d0"/>:<AiFillDislike size="1rem" color="#fecdd3"/>}
+                        </div>
                     </div>
                     <div>
                         <button type="submit" className="bg-green text-white rounded-md p-4 text-md cursor w-full mt-4">Submit Request</button>

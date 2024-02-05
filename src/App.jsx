@@ -16,6 +16,7 @@ import { ChairManMessagePage } from './pages/chairmanMessage';
 import { SuccessStoryPage } from './pages/successStory';
 import { PageNotFound } from './pages/404';
 import { Toaster } from 'react-hot-toast';
+import { ThankYou } from './pages/thankyou';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
                 <Route exact path="/career" element={ <CareerPage />}/>
                 <Route exact path="/contact" element={ <ContactusPage/>}/>
                 <Route exact path="/loan" element={ <LoanPage/>}/>
+                <Route exact path="/thank-you" element={ <ThankYou/>}/>
                 <Route exact path="/loan_package" element={ <LoanPackagePage/>}/>
                 <Route exact path="/success_stories" element={ <SuccessStoryPage/>}/>
                 <Route exact path="*" element={ <PageNotFound/>}/>
