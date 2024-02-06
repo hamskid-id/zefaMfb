@@ -53,7 +53,7 @@ export const Nav =()=>{
                         <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to={`/open_account/${accountOpening}`}>Open Account</Link>
                         <AboutUsDropdown/>
                         <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/contact">Contact Us</Link>
-                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/loan">Contact Us</Link>
+                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/loan">Apply For Loan</Link>
                     </div>
                 </div>
             </div>
