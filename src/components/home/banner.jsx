@@ -26,11 +26,11 @@ export const Banner =({
                     <div className="flex flex-col justify-start items-start xl:mb-[8rem] lg:mb-[8rem] md:mb-[8rem] sm:mb-[3rem] xs:mb-[3rem]">
                         <div className="flex flex-col justify-start mb-4 translate-text">
                             <Text
-                                style="lg:text-6xl xl:text-6xl md:text-6xl sm:text-4xl xs:text-4xl text-start font-semibold text-start mb-2"
+                                style="lg:text-6xl xl:text-6xl md:text-6xl sm:text-xl xs:text-xl text-start font-semibold text-start mb-2"
                                 value={title}
                             />
                             <Text
-                                style="c-brown lg:text-6xl xl:text-6xl md:text-6xl sm:text-4xl xs:text-4xl font-semibold text-start"
+                                style="c-brown lg:text-6xl xl:text-6xl md:text-6xl sm:text-xl xs:text-xl font-semibold text-start"
                                 value={subTitle}
                             />
                         </div>

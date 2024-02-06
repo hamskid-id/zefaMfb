@@ -23,11 +23,17 @@ export const LoanSectionTwo =()=>{
                 value="Our sales team will be in touch shortly to speak about what's possible."
             />
             <Text
-                style="lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm text-black font-semibold mb-8 text-center"
+                style="lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm text-black font-semibold text-center"
                 value="Kindly fill all form fields with valid information"
             />
+            <div className="flex items-center mb-8 ">
+                <span className="text-black text-md font-semibold">Note:{"  "}</span>
+                <span><AiFillDislike size="1rem" color="#fecdd3"/>{" "}</span>
+                <span className="text-black text-md font-semibold"> must change to{" "}</span>
+                <span><AiFillLike size="1rem" color="#a7f3d0"/></span>
+            </div>
             <div className="w-full bg-white rounded-md p-4 my-4">
-                <form target="_blank" action="https://formsubmit.co/webcontact@zefamfb.com" method="POST">
+                <form target="_blank" action="https://formsubmit.co/It@zefamfb.com" method="POST">
                     <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-4">
                     <input type="hidden" name="_next" value="https://zefa-microfinace.vercel.app/thank-you"/>
                     <input type="hidden" name="_subject" value="Loan Application Form Submission"/>

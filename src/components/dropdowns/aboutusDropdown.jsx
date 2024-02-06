@@ -27,13 +27,13 @@ export const AboutUsDropdown =()=>{
         {
           key: '4',
           label:(
-            <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=our_core_values">Our core values</Link>
+            <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=our_team">Our team</Link>
           )
         },
         {
             key: '5',
             label:(
-              <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=our_team">Our team</Link>
+              <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-black xl:text-black md:text-black xs:text-white sm:text-white " to="/aboutUs?tab=our_core_values">Our core values</Link>
             )
           },
     ];

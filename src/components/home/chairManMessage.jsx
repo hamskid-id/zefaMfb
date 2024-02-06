@@ -3,14 +3,14 @@ import {useNavigate} from "react-router-dom";
 export const ChairManSection =()=>{
     const navigate = useNavigate();
     return(
-        <div className="bg-white lg:px-24 py-8 xl:px-24 md:px-4 sm:px-4 xs:px-2 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 lg:gap-12 xl:gap-12 md:gap-2 sm:gap-2 xs:gap-2">
+        <div className="bg-white lg:px-28 py-8 xl:px-28 md:px-4 sm:px-4 xs:px-2 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 lg:gap-12 xl:gap-12 md:gap-2 sm:gap-2 xs:gap-2">
             <div className="flex flex-col items-start">
                 <Text
-                    style="font-medium text-chairmanmessage text-black mb-2"
+                    style="font-medium text-4xl text-black mb-4"
                     value="The Chairman's Message"
                 />
                 <Text
-                    style="font-medium text-2xl text-black mb-2"
+                    style="font-medium text-2xl text-black mb-4"
                     value="Welcome to Zefa Microfinace Bank's website"
                 />
                 <Text

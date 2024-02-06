@@ -36,7 +36,7 @@ export const ContactInputSection =()=>{
                     </MarkerClusterGroup>
                     </MapContainer>
             </div>
-            <form  target="_blank" action="https://formsubmit.co/webcontact@zefamfb.com" method="POST">
+            <form  target="_blank" action="https://formsubmit.co/It@zefamfb.com" method="POST">
                 <div className="flex flex-col justify-between">
                     <input type="hidden" name="_next" value="https://zefa-microfinace.vercel.app/thank-you"/>
                     <input type="hidden" name="_subject" value="Contact Form Submission"/>

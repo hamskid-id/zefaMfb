@@ -95,7 +95,7 @@ export const PersonalTwo =({
             try{
                 setIsLaoding(true)
                 const response = await axios.post(
-                    "https://formsubmit.co/ajax/webcontact@zefamfb.com",
+                    "https://formsubmit.co/ajax/It@zefamfb.com",
                     formData,
                     {
                         headers:{

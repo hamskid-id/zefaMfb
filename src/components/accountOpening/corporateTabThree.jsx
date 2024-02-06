@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { CorporateTwo } from "./corporateTabTwo";
@@ -8,6 +8,7 @@ import { CorporateTwo } from "./corporateTabTwo";
 export const CorporateThree =({
     setActiveTab
 })=>{
+    const navigate = useNavigate()
     const itemStored = JSON.parse(localStorage.getItem('account_opening'));
     const[
         isLoading,
@@ -92,7 +93,7 @@ export const CorporateThree =({
         try{
             setIsLaoding(true)
             const response = await axios.post(
-                "https://formsubmit.co/ajax/webcontact@zefamfb.com",
+                "https://formsubmit.co/ajax/It@zefamfb.com",
                 formData,
                 {
                     headers:{
@@ -108,6 +109,7 @@ export const CorporateThree =({
             setIsLaoding(false);
             if(success){
                 toast.success(message);
+                navigate("https://zefa-microfinace.vercel.app/thank-you")
             }else{
                 toast.error(message);
             }

@@ -240,11 +240,11 @@
 
 @keyframes  translateAnimationTwo {
   0% {
-    transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) ;
     opacity: 0;
   }
   100%{
-    transform: translateY(0) scale(1);
+    transform: translateY(0) ;
     opacity: 1;
   }
 }

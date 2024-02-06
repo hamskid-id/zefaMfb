@@ -1,23 +1,21 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useRef, useState } from "react";
 import { motion} from "framer-motion";
 import React from 'react';
 import { variants } from "./navVarient";
 import { AboutUsDropdown } from "./dropdowns/aboutusDropdown";
-import { OpenAccountDropdown } from "./dropdowns/openAccountDropdown";
-import { BtnDropdown } from "./dropdowns/appBtnDropdown";
 import Hamburger from 'hamburger-react';
 import { useWindowHeight } from "./useDimension";
 import { Text } from "./text";
 
 export const Nav =()=>{
     const navRef = useRef(null);
+    const navigate = useNavigate()
     const [showNavToggler,setShowNavToggler] = useState(false);
     const scrollY = useWindowHeight();
     let accountOpening ="personal"
 
     useEffect(()=>{
-
         const checkViewWidth = ()=>{
             if(window.innerWidth >767 && showNavToggler){
                 navRef.current?.classList.remove("active");
@@ -55,7 +53,7 @@ export const Nav =()=>{
                         <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to={`/open_account/${accountOpening}`}>Open Account</Link>
                         <AboutUsDropdown/>
                         <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/contact">Contact Us</Link>
-                        <BtnDropdown type="text"/>
+                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/loan">Contact Us</Link>
                     </div>
                 </div>
             </div>
@@ -67,7 +65,7 @@ export const Nav =()=>{
                             ? "opacity-100 translate-y-0 shadow-[0_0_40px_0_rgba(0,0,0,0.16)] fixed top-0 lg:w-[85%] xl:w-[85%] sm:w-[96%] md:w-[85%] xs:w-[96%]  z-50 transition-all duration-1000 "
                             : " translate-y-5"
                         }
-                        flex lg:flex-row xl:flex-row md:flex-row sm:flex-col xs:flex-col xxs:flex-col xs:p-2 xxs:p-2 lg:px-4 xl:px-8 md:px-8 lg:py-4 xl:py-4 md:py-4  rounded justify-between items-center loan_cover mb-2
+                        flex lg:flex-row xl:flex-row md:flex-row sm:flex-col xs:flex-col xxs:flex-col xs:p-2 xxs:p-2 lg:px-4 xl:px-8 md:px-8 lg:py-4 xl:py-4 md:py-4  justify-between items-center loan_cover mb-2
                         `
                     }
                 >
@@ -103,7 +101,12 @@ export const Nav =()=>{
                             <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-[#006837]" to="/contact">Contact Us</Link>
                         </div>
                         <div  className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full">
-                            <BtnDropdown/>
+                            <button
+                                onClick={()=>navigate("/loan")}
+                                className="border lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn text-white rounded-md py-2 px-4 text-md cursor"
+                            >
+                                Apply for Loan
+                            </button>
                         </div>
                     </div>
                     {/**mobile */}
@@ -119,12 +122,17 @@ export const Nav =()=>{
                         <div className="navList flex lg:flex-row xl:flex-row justify-between md:flex-row sm:flex-col xs:flex-col xxs:flex-col lg:w-[50%] xl:w-[50%] md:w-[70%] sm:w-[100%] xs:w-[100%]">
                             <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/">Home</Link>
                             <AboutUsDropdown/>
-                            <OpenAccountDropdown/>
+                            <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to={`/open_account/${accountOpening}`}>Open Account</Link>
                             <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/success_stories">Success Story</Link>
                             <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/contact">Contact Us</Link>
                         </div>
                         <div  className="lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full lg:border-none xl:border-none md:border-none sm:border xs:border rounded">
-                            <BtnDropdown/>
+                            <button
+                                onClick={()=>navigate("/loan")}
+                                className="border lg:w-auto xl:w-auto sm:w-full md:w-auto xs:w-full applyBtn text-white rounded-md py-2 px-4 text-md cursor"
+                            >
+                                Apply for Loan
+                            </button>
                         </div>
                     </motion.div>
                 </div>
