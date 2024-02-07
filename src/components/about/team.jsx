@@ -49,7 +49,7 @@ export const TeamSlide=()=>{
                             },{
                                 img:"https://zefa.vercel.app/images/audit-2.png", 
                                 name:"Mrs Dahunsi Arinola",
-                                position:"(Manager, Internal Control $ Audit)"
+                                position:"(Manager, Internal Control & Audit)"
                             },{
                                 img:"https://zefa.vercel.app/images/fin-ops.png",
                                 name:"Oyewola Olushola",

@@ -62,7 +62,7 @@ export const Nav =()=>{
                     className={
                         `${
                             scrollY > 200
-                            ? "opacity-100 translate-y-0 shadow-[0_0_40px_0_rgba(0,0,0,0.16)] fixed top-0 fill-available  z-50 transition-all duration-1000 lg:right-[5rem] xl:right-[5rem] md:right-[3rem] sm:right-[0.5rem] xs:right-[0.5rem] lg:left-[5rem] xl:left-[5rem] md:left-[3rem] sm:left-[0.5rem] xs:left-[0.5rem]"
+                            ? "opacity-100 translate-y-0 shadow-[0_0_40px_0_rgba(0,0,0,0.16)] fixed top-0 fill-available  z-50 transition-all duration-1000 lg:right-[5rem] xl:right-[5rem] md:right-[3rem] sm:right-[0.5rem] xs:right-[0.5rem] xxs:right-[0.5rem] lg:left-[5rem] xl:left-[5rem] md:left-[3rem] sm:left-[0.5rem] xs:left-[0.5rem]"
                             : " translate-y-5"
                         }
                         flex lg:flex-row xl:flex-row md:flex-row sm:flex-col xs:flex-col xxs:flex-col xs:p-2 xxs:p-2 lg:px-4 xl:px-8 md:px-8 lg:py-4 xl:py-4 md:py-4  justify-between items-center loan_cover mb-2
