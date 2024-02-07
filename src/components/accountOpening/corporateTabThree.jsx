@@ -93,7 +93,7 @@ export const CorporateThree =({
         try{
             setIsLaoding(true)
             const response = await axios.post(
-                "https://formsubmit.co/ajax/It@zefamfb.com",
+                "https://formsubmit.co/ajax/samjidiamond@gmail.com",
                 formData,
                 {
                     headers:{
