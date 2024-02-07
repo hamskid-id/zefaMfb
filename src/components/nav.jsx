@@ -27,7 +27,7 @@ export const Nav =()=>{
     })
     return(
         <div 
-            className="lg:px-24 xl:px-24 pd:mx-8 sm:p-2 xs:px-2 xxs:px-2 w-full z-50 absolute"
+            className="lg:px-24 xl:px-24 pd:mx-8 sm:p-0 xs:px-0 xxs:px-0 w-full z-50 absolute"
         >
             <div className="flex flex-row justify-between items-center border-danger">
                 <div className="lg:w-[20%] xl:w-[20%] md:w-[20%] sm:w-full xs:w-full lg:block xl:block md:block sm:hidden xs:hidden">
@@ -49,20 +49,20 @@ export const Nav =()=>{
                         <Link className="text-sm text-white" to="/contact">Contacts</Link>
                     </div>
                     <div
-                        className="lg:hidden xl:hidden md:hidden sm:flex xs:flex flex-row justify-between w-full items-center">
-                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to={`/open_account/${accountOpening}`}>Open Account</Link>
+                        className="lg:hidden xl:hidden md:hidden sm:flex xs:flex flex-row justify-between w-full items-center px-2 bg-[#006837]">
+                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-sm xs:text-sm text-white" to={`/open_account/${accountOpening}`}>Open Account</Link>
                         <AboutUsDropdown/>
-                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/contact">Contact Us</Link>
-                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md text-white" to="/loan">Apply For Loan</Link>
+                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-sm xs:text-sm text-white" to="/contact">Contact Us</Link>
+                        <Link className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-sm xs:text-sm text-white" to="/loan">Apply For Loan</Link>
                     </div>
                 </div>
             </div>
-            <div className="lg:px-8 xl:px-8 md:px-0 sm:px-0 xs:px-0">
+            <div className="px-2 mt-[-0.7rem]">
                 <div
                     className={
                         `${
                             scrollY > 200
-                            ? "opacity-100 translate-y-0 shadow-[0_0_40px_0_rgba(0,0,0,0.16)] fixed top-0 lg:w-[85%] xl:w-[85%] sm:w-[96%] md:w-[85%] xs:w-[96%]  z-50 transition-all duration-1000 "
+                            ? "opacity-100 translate-y-0 shadow-[0_0_40px_0_rgba(0,0,0,0.16)] fixed top-0 fill-available  z-50 transition-all duration-1000 lg:right-[5rem] xl:right-[5rem] md:right-[3rem] sm:right-[0.5rem] xs:right-[0.5rem] lg:left-[5rem] xl:left-[5rem] md:left-[3rem] sm:left-[0.5rem] xs:left-[0.5rem]"
                             : " translate-y-5"
                         }
                         flex lg:flex-row xl:flex-row md:flex-row sm:flex-col xs:flex-col xxs:flex-col xs:p-2 xxs:p-2 lg:px-4 xl:px-8 md:px-8 lg:py-4 xl:py-4 md:py-4  justify-between items-center loan_cover mb-2

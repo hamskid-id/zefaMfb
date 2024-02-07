@@ -142,8 +142,8 @@ export const PersonalOne =({
                         </div>
                     </div>
                     </div>
-                    <div>
-                        <button className="bg-green text-white rounded-md p-4 text-md cursor mt-4">Next</button>
+                    <div className="mt-4">
+                        <button className="bg-green text-white rounded-md p-4 text-md cursor">Next</button>
                     </div>
                 </form>
             </>

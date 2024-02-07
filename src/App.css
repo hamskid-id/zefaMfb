@@ -5,6 +5,9 @@
   will-change: filter;
   transition: filter 300ms;
 }
+.fill-available{
+  width:-webkit-fill-available;
+}
 .navListContainer{
   display:flex;
 }

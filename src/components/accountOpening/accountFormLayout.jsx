@@ -39,7 +39,7 @@ export const AccountFormLayout =({
                             return(
                                 <div 
                                     key={index}
-                                    onClick={()=>navigate(`/open_account/${value}`)}
+                                    onClick={()=>window.location.replace(`/open_account/${value}`)}
                                     className={`${ value ===title?"bg-green text-white rounded-md":"text-black"} lg:text-lg xl:text-lg md:text-lg sm:text-sm xs:text-sm text-center p-4`}
                                 >
                                     {name}

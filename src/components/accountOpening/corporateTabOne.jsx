@@ -15,23 +15,20 @@ export const CorporateOne =({
     const SubmitHandler =({
         companyName,
         nameOfBusiness,
-        date,
-        directorsBvn
+        date
     })=>{
         localStorage.setItem(
             "account_opening",
             JSON.stringify({
                 companyName,
                 nameOfBusiness,
-                date,
-                directorsBvn
+                date
             })
         )
         console.log(
             companyName,
             nameOfBusiness,
-            date,
-            directorsBvn
+            date
         )
         setActiveTab(
             (prev)=>(
@@ -84,8 +81,8 @@ export const CorporateOne =({
                     }
                     
                     </div>
-                    <div>
-                        <button className="bg-green text-white rounded-md p-4 text-md cursor mt-4">Next</button>
+                    <div className="mt-4">
+                        <button className="bg-green text-white rounded-md p-4 text-md cursor">Next</button>
                     </div>
                 </form>
             </>

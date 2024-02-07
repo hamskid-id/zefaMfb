@@ -16,7 +16,7 @@ export const Banner =({
             backgroundRepeat: "no-repeat",
             transformOrigin: `0% 0% 0px`
         }}
-        className=" w-100 relative introContainer flex flex-column justify-center lg:pt-[23rem] xl:pt-[23rem] md:pt-[23rem] sm:pt-[10rem] xs:pt-[10rem] px-4"
+        className=" w-100 relative introContainer flex flex-column justify-center lg:pt-[23rem] xl:pt-[23rem] md:pt-[23rem] sm:pt-[14rem] xs:pt-[14rem] px-4"
     >
         <div className="SlideBg">
         </div>

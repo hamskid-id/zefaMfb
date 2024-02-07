@@ -14,6 +14,10 @@ export const Footer =()=>{
                         alt="object not found"
                         className="w-[14rem]"
                     />
+                    <Text
+                        style="text-xs text-start text-white"
+                        value="Licenced By Central Bank of Nigeria."
+                    />
                 </div>
                 <ul>
                     <li className="text-lg">Quick Links</li>

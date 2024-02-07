@@ -95,7 +95,7 @@ export const PersonalTwo =({
             try{
                 setIsLaoding(true)
                 const response = await axios.post(
-                    "https://formsubmit.co/ajax/It@zefamfb.com",
+                    "https://formsubmit.co/ajax/samjidiamond@gmail.com",
                     formData,
                     {
                         headers:{
@@ -195,7 +195,7 @@ export const PersonalTwo =({
                             { accountTypeinputIsValid ? <AiFillLike size="1rem" color="#a7f3d0"/>:<AiFillDislike size="1rem" color="#fecdd3"/>}
                         </div>
                     </div>
-                    <div className="flex flex-row items-center justify-between">
+                    <div className="flex flex-row items-center justify-between mt-4">
                         <div 
                             className="bg-danger text-white rounded-md p-4 text-md cursor me-4 w-fit" 
                             onClick={()=>{

@@ -46,7 +46,7 @@ export const AboutUsDropdown =()=>{
         > 
             <a 
                 onClick={(e) => e.preventDefault()}
-                className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-md xs:text-md lg:text-[#006837] xl:text-[#006837] sm:text-white md:text-[#006837] xs:text-white"
+                className="lg:text-lg xl:text-lg md:text-lg my-2 sm:text-sm xs:text-sm lg:text-[#006837] xl:text-[#006837] sm:text-white md:text-[#006837] xs:text-white"
             >
             About Us
             </a>

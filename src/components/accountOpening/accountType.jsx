@@ -25,7 +25,7 @@ export const AccountType =()=>{
                         <button
                             onClick={()=>{
                                 let title="personal"
-                                navigate(`/open_account/${title}`)
+                                window.location.replace(`/open_account/${title}`)
                                 } 
                             }
                             className="bg-green text-white rounded-md py-4 px-8 lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm mb-2 cursor">Open Personal Account</button>
@@ -42,7 +42,7 @@ export const AccountType =()=>{
                         <button
                             onClick={()=>{
                                 let title="corporate"
-                                navigate(`/open_account/${title}`)
+                                window.location.replace(`/open_account/${title}`)
                                 } 
                             } 
                             className="bg-green text-white rounded-md py-4 px-8 lg:text-md xl:text-md md:text-md sm:text-sm xs:text-sm mb-2 cursor">Open Corporate Account</button>

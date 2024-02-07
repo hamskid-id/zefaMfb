@@ -164,7 +164,7 @@ export const CorporateThree =({
                                 />
                         </div>
                     </div>
-                    <div className="flex flex-row items-center justify-between">
+                    <div className="flex flex-row items-center justify-between mt-4">
                         <div 
                             className="bg-danger text-white rounded-md p-4 text-md cursor me-4 w-fit"
                             onClick={()=>{
