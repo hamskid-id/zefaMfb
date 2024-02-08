@@ -109,7 +109,7 @@ export const CorporateThree =({
             setIsLaoding(false);
             if(success){
                 toast.success(message);
-                navigate("https://zefa-microfinace.vercel.app/thank-you")
+                navigate("/thank-you");
             }else{
                 toast.error(message);
             }
@@ -133,7 +133,7 @@ export const CorporateThree =({
                             <label
                                 htmlFor={"cSignature"}
                                 className="pointer-events-none text-sm origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out  dark:text-neutral-200 dark:peer-focus:text-primary"
-                            >Upload cSignature of contact
+                            >Upload Signature of contact
                             </label>
                             <input
                                 type="file"

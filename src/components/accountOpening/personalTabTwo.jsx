@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { PersonalOne } from "./personalTabOne";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { InputField } from "../formField";
 import { AiFillDislike, AiFillLike } from "react-icons/ai";
 import toast from "react-hot-toast";
@@ -11,6 +11,7 @@ export const PersonalTwo =({
     setActiveTab
 })=>{
     const itemStored = JSON.parse(localStorage.getItem('account_opening'));
+    const navigate = useNavigate();
     const[
         isLoading,
         setIsLaoding
@@ -111,6 +112,7 @@ export const PersonalTwo =({
                 setIsLaoding(false);
                 if(success){
                     toast.success(message);
+                    navigate("/thank-you");
                 }else{
                     toast.error(message);
                 }
