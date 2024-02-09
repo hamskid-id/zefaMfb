@@ -125,7 +125,7 @@
   background:whitesmoke;
 }
 .c-brown,.c-olive{
-  color:darkolivegreen;
+  color:#8cbf1c;
 }
 .bg-olive{
   background:darkolivegreen!important;
@@ -179,10 +179,10 @@
 }
 
 .team-caption:hover .caption-p{
-  color:darkolivegreen;
+  color:#8cbf1c;
 }
 .home-testimony-card:hover{
-  background-color: rgba(255, 217, 0, 0.671);
+  background-color: #8cbf1c;
 }
 .home-testimony-card{
   background: #006837;
