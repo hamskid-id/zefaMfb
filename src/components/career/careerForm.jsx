@@ -60,7 +60,7 @@ export const CareerForm =()=>{
             />
             <hr className="text-black"/>
             <div className="w-full bg-white rounded-md p-4 my-4">
-                <form action="https://formsubmit.co/samjidiamond@gmail.com" encType="multipart/form-data" method="POST">
+                <form action="https://formsubmit.co/tokade@gmail.com" encType="multipart/form-data" method="POST">
                     <div className="mb-4 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-4">
                     <input type="hidden" name="_next" value="https://zefa-microfinace.vercel.app/thank-you"/>
                     <input type="hidden" name="_subject" value="Career Form Submission"/>

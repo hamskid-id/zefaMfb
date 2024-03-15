@@ -106,7 +106,7 @@ export const PersonalThree =({
         try{
             setIsLaoding(true)
             const response = await axios.post(
-                "https://formsubmit.co/ajax/samjidiamond@gmail.com",
+                "https://formsubmit.co/ajax/tokade@gmail.com",
                 formData,
                 {
                     headers:{
