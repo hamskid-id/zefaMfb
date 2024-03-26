@@ -5,6 +5,7 @@ import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png'
 import MarkerClusterGroup from "./react-leaflet-markercluster";
+import { formsubmit_address, formsubmit_success_return_url } from "../../utils/formsubmit_configue";
 
 export const ContactInputSection =()=>{
     delete L.Icon.Default.prototype._getIconUrl;
@@ -36,9 +37,9 @@ export const ContactInputSection =()=>{
                     </MarkerClusterGroup>
                     </MapContainer>
             </div>
-            <form  target="_blank" action="https://formsubmit.co/tokade@gmail.com" method="POST">
+            <form  target="_blank" action={`https://formsubmit.co/${formsubmit_address}`} method="POST">
                 <div className="flex flex-col justify-between">
-                    <input type="hidden" name="_next" value="https://zefa-microfinace.vercel.app/thank-you"/>
+                    <input type="hidden" name="_next" value={`${formsubmit_success_return_url}thank-you`}/>
                     <input type="hidden" name="_subject" value="Contact Form Submission"/>
                     {
                         [

@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { Text } from "../text"
 import { InputField } from "../formField";
 import { AiFillDislike, AiFillLike } from "react-icons/ai";
+import { formsubmit_address, formsubmit_success_return_url } from "../../utils/formsubmit_configue";
 
 export const LoanSectionTwo =()=>{
     const{
@@ -33,9 +34,9 @@ export const LoanSectionTwo =()=>{
                 <span><AiFillLike size="1rem" color="#a7f3d0"/></span>
             </div>
             <div className="w-full bg-white rounded-md p-4 my-4">
-                <form target="_blank" action="https://formsubmit.co/tokade@gmail.com" method="POST">
+                <form target="_blank" action={`https://formsubmit.co/${formsubmit_address}`} method="POST">
                     <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 xxs:grid-cols-1 gap-4">
-                    <input type="hidden" name="_next" value="https://zefa-microfinace.vercel.app/thank-you"/>
+                    <input type="hidden" name="_next" value={`${formsubmit_success_return_url}thank-you`}/>
                     <input type="hidden" name="_subject" value="Loan Application Form Submission"/>
                     {
                         [

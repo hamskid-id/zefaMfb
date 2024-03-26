@@ -4,6 +4,7 @@ import { PersonalTwo } from "./personalTabTwo";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { formsubmit_address, formsubmit_success_return_url } from "../../utils/formsubmit_configue";
 
 export const PersonalThree =({
     setActiveTab
@@ -90,7 +91,7 @@ export const PersonalThree =({
             value:account_type
         },{
             title:"_next",
-            value:"https://zefa.vercel.app/acct-opening-thanks.html"
+            value:`${formsubmit_success_return_url}acct-opening-thanks.html`
         },{
             title:"_subject",
             value:title ==="personal"?"Personal Account Form Submission":"Corporate Account Form Submission"
@@ -106,7 +107,7 @@ export const PersonalThree =({
         try{
             setIsLaoding(true)
             const response = await axios.post(
-                "https://formsubmit.co/ajax/tokade@gmail.com",
+                `https://formsubmit.co/ajax/${formsubmit_address}`,
                 formData,
                 {
                     headers:{

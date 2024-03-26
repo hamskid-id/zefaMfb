@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { CorporateTwo } from "./corporateTabTwo";
+import { formsubmit_address, formsubmit_success_return_url } from "../../utils/formsubmit_configue";
 
 export const CorporateThree =({
     setActiveTab
@@ -77,7 +78,7 @@ export const CorporateThree =({
             value:date
         },{
             title:"_next",
-            value:"https://zefa-microfinace.vercel.app/thank-you"
+            value:`${formsubmit_success_return_url}thank-you`
         },{
             title:"_subject",
             value:title ==="personal"?"Personal Account Form Submission":"Corporate Account Form Submission"
@@ -93,7 +94,7 @@ export const CorporateThree =({
         try{
             setIsLaoding(true)
             const response = await axios.post(
-                "https://formsubmit.co/ajax/tokade@gmail.com",
+                `https://formsubmit.co/ajax/${formsubmit_address}`,
                 formData,
                 {
                     headers:{
