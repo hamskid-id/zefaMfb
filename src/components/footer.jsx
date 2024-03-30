@@ -10,7 +10,7 @@ export const Footer =()=>{
             <div>   
                 <div>
                     <img
-                        src="https://zefamfb.com/images/zefa-normal.png"
+                        src="https://zefa.vercel.app/images/zefa-normal.png"
                         alt="object not found"
                         className="w-[14rem]"
                     />
@@ -35,7 +35,7 @@ export const Footer =()=>{
                 />
                 <div className="mb-2">
                     <img
-                        src="https://zefamfb.com/images/footer_map.png"
+                        src="https://zefa.vercel.app/images/footer_map.png"
                         alt="object not found"
                         className="w-full"
                     />

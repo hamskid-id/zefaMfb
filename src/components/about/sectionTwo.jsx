@@ -127,10 +127,10 @@ export const AboutSectionTwo =()=>{
                         style="lg:text-4xl xl:text-4xl md:text-4xl sm:text-2xl text-start text-black mb-4"
                         value="THE TEAM"
                     />
-                    <Text
+                    {/* <Text
                         style="lg:text-lg xl:text-lg md:text-lg sm:text-md xs:text-md text-start text-black mb-2"
                         value="We have eight fundamental values which are fixed and absolute and are foremost in our quest to realize our vision. All employees, managers and executives are responsible for making compliance a vital part of our business process to ensure sustainable success"
-                    />
+                    /> */}
                 </div>
                 <TeamSlide/>
                 <div

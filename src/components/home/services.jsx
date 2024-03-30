@@ -16,37 +16,37 @@ export const Services =()=>{
                 {
                     [
                         {
-                            image:"https://zefamfb.com/images/undraw_Savings_re_eq4w.svg",
+                            image:"https://zefa.vercel.app/images/undraw_Savings_re_eq4w.svg",
                             title:"ACCOUNT TYPES",
                             info:"To take care of specific needs of different categories of customers, ZEFA Microfinance Bank has various account types to meet these needs. They include Personal, Corporate, Target, Group or Investment accounts.",
                             btnText:"Open Account",
                             route:"/personal_form"
                         },{
-                            image:"https://zefamfb.com/images/undraw_transfer_money_rywa%20(2).svg",
+                            image:"https://zefa.vercel.app/images/undraw_transfer_money_rywa%20(2).svg",
                             title:"LOAN PACKAGES",
                             info:"ZEFA Microfinance Bank Ltd offers a variety of loan packages designed for all categories of our customers.They include Consumer Loans, Personal business Loans or Group Loans.",
                             btnText:"Apply Now",
                             route:"/loan"
                         },{
-                            image:"https://zefamfb.com/images/progress__monochromatic.svg",
+                            image:"https://zefa.vercel.app/images/progress__monochromatic.svg",
                             title:"LEADERSHIP",
                             info:"We believe that the success of our business is hinged on the quality of leadership. ZEFA has assembled a winning management team comprising of mostly young and experienced hands in the industry.",
                             btnText:"Meet the team",
                             route:"/aboutUs?tab=our_team"
                         },{
-                            image:"https://zefamfb.com/images/undraw_stand_out_1oag.svg",
+                            image:"https://zefa.vercel.app/images/undraw_stand_out_1oag.svg",
                             title:"WHY CHOOSE US",
                             info:"We are focused on supporting the dreams and aspirations of many financially excluded members of society. Through our processes we build personalized relationships of support and trust through simple and effective procedures.",
                             btnText:"Our Differentiators",
                             route:"/aboutUs?tab=differentiators"
                         },{
-                            image:"https://zefamfb.com/images/handshake.svg",
+                            image:"https://zefa.vercel.app/images/handshake.svg",
                             title:"OUR VALUES",
                             info:"We have eight fundamental values which are fixed, absolute & foremost in our quest to realize our vision. Everyone is responsible for making compliance a vital part of our business process to ensure sustainable success.",
                             btnText:"Core Values",
                             route:"/aboutUs?tab=our_core_values"
                         },{
-                            image:"https://zefamfb.com/images/undraw_phone_call_grmk.svg",
+                            image:"https://zefa.vercel.app/images/undraw_phone_call_grmk.svg",
                             title:"EMERGENCY CONTACT",
                             info:"In case of an emergency, or simply to make enquiries, you can reach Zefa Microfinance Bank through any of our communication channels.A customer service executive will be on hand to provide answers.",
                             btnText:"Contact Us",

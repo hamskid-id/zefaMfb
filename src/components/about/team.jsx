@@ -74,7 +74,7 @@ export const TeamSlide=()=>{
                                             alt="object not found"
                                             className="w-full h-[28rem] rounded-t-md"   
                                         />
-                                        {/* <div className="team-caption translate-text absolute bottom-[1rem] left-[1rem] right-[1rem] flex flex-col justify-center items-center p-2">
+                                        <div className="team-caption translate-text absolute bottom-[1rem] left-[1rem] right-[1rem] flex flex-col justify-center items-center p-2">
                                             <Text
                                                 style="text-lg caption-p text-center mb-2 font-semibold"
                                                 value={name}
@@ -83,7 +83,7 @@ export const TeamSlide=()=>{
                                                 style="text-lg caption-p text-center font-semibold"
                                                 value={position}
                                             />
-                                        </div>  */}
+                                        </div> 
                                     </div>  
                                 </div>
                                     
